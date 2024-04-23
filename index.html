@@ -1,39 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机数生成器</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
 <body>
-
-    <h1>随机数生成器</h1>
-
-    <p>输入下限和上限，然后点击下面的按钮生成一个在这个范围内的随机数:</p>
-
-    最小值: <input id="min" type="number"><br>
-    最大值: <input id="max" type="number"><br>
-    <button onclick="generateRandomNumber()" style="font-size: 16px;">生成</button>
-
-    <p id="randomNumber"></p>
-
-    <script>
-        function getRandomIntExclude(min, max, exclude) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            var randomNumber;
-            do {
-                randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-            } while (exclude.includes(randomNumber));
-            return randomNumber;
-        }
-
-
-
-        function generateRandomNumber() {
-            var min = document.getElementById('min').value; //从输入框获取最小值
-            var max = document.getElementById('max').value; //从输入框获取最大值
-            var number = getRandomIntExclude(min, max, [31, 36]);  //生成一个在指定范围内的随机数
-            document.getElementById('randomNumber').innerHTML = number; //在网页上显示这个随机数
-        }
-    </script>
+    <div class="box">
+        <h1>随机数生成器</h1>
+        <p>输入下限和上限，然后点击下面的按钮生成一个在这个范围内的随机数:</p>
+        最小值: <input id="min" type="number"><br>
+        最大值: <input id="max" type="number"><br>
+        <button onclick="generateRandomNumber()" style="font-size: 16px;">生成</button>
+        <p id="randomNumber"></p>
+    </div>
 </body>
-
-
 </html>
