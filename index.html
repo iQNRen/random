@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark" />
     <title>随机数生成器</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.min.js"></script>
+    <!-- <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 </head>
+
 <body>
+    <div class="app" id="darkModeButton">
+        <label class="label34">
+            <input class="inp34" type="checkbox">
+            <span class="check-span34" onclick="setTheme()"></span>
+        </label>
+    </div>
     <div class="box">
         <h1>随机数生成器</h1>
         <p>输入下限和上限，然后点击下面的按钮生成一个在这个范围内的随机数:</p>
-        最小值: <input id="min" type="number"><br>
-        最大值: <input id="max" type="number"><br>
+        最小值: <input id="min" type="number" required><br>
+        最大值: <input id="max" type="number" required><br>
         <button onclick="generateRandomNumber()" style="font-size: 16px;">生成</button>
         <p id="randomNumber"></p>
     </div>
+
+    <div id="particles-js">
+    </div>
 </body>
+
 </html>

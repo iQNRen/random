@@ -1,3 +1,11 @@
+html[theme='dark-mode']{
+    filter: invert(0.8) hue-rotate(180deg);
+}
+
+html {
+    transition: color 300ms, background-color 300ms;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -7,13 +15,15 @@ body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
 }
+
 .box {
     text-align: center;
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .box input {
     margin: 10px 0;
     padding: 10px;
@@ -23,6 +33,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
 .box button {
     padding: 10px 20px;
     font-size: 16px;
@@ -32,9 +43,85 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .box button:hover {
     background-color: #0056b3;
 }
-#randomNumber{
+
+#randomNumber {
     font-size: 30px;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; 
+}
+.live2dcanvas{
+    filter: none !important;
+}
+
+
+/* 切换暗黑模式 */
+#darkModeButton {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.app {
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label34 {
+    width: 60px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+}
+
+.inp34 {
+    display: none;
+}
+
+.check-span34 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #ffffff;
+    border: 2px solid #383838;
+    box-sizing: border-box;
+    border-radius: 16px;
+    transition: 0.3s linear;
+}
+
+.check-span34:after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    background-color: orange;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    border-radius: 11px;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+}
+
+.inp34:checked+.check-span34 {
+    background-color: #383838;
+}
+
+.inp34:checked+.check-span34:after {
+    transform: translateX(-26px);
+    background-color: #383838;
+    box-shadow: inset -8px -4px 0 #ffffff;
 }
