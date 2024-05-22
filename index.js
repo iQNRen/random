@@ -53,7 +53,7 @@ L2Dwidget.init({
         "scale": 1
     },
     "display": {
-        "position": "right", //模型的表现位置
+        "position": "left", //模型的表现位置
         "width": 150, //模型的宽度
         "height": 300, //模型的高度
         "hOffset": 0,
